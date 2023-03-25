@@ -1,9 +1,10 @@
 # Sarathi-Mental-Wellness-app-
 
 
-The Sarathi an android application that would help people to cope with their mental health problems 
-such as depression and anxiety and stress. We would be using user-friendly means to know more about
-the people and their problems via Chatbots, mood trackers.
+Sarathi is an android application to help people cope with their mental health issues, such as depression, anxiety and stress.
+We use people-friendly methods to know more about the person and their problems through mood trackers and the chatbot. 
+We also provide audio therapy, meditation and yoga, games, and self-help books to help the user feel calm and comfortable.
+
 
 # Splash And Main Screen
 <p>
