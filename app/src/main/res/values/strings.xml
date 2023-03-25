@@ -9,4 +9,12 @@
     <string name="activityProgress">Activity\nProgress</string>
     <string name="selfhelpB">Self help\nBooks</string>
     <string name="start_talking">Start talking</string>
+
+    <string name="game1text">Math is Fun! Games</string>
+    <string name="game2text">Mind Games</string>
+    <string name="game3text">Smart Brain Games</string>
+    <string name="game4text">Poki Games!</string>
+    <string name="game5text">Fast Games</string>
+    <string name="gamestitle">Games</string>
+
 </resources>
