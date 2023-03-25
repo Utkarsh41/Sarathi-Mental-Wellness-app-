@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/krishna"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sarathi"
+        tools:targetApi="31">
+        <activity
+            android:name=".sarathiChatbot.SrMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".selfHelpBooksPack.ViewPdf"
+            android:exported="false"
+            android:parentActivityName=".audioTherapyPack.AudioTherapy" />
+        <activity
+            android:name=".activityPack.ActivityProgressTrack"
+            android:exported="false"
+            android:label="Activity Progress" />
+        <activity
+            android:name=".gamepack.Games"
+            android:exported="false"
+            android:label="Games" />
+        <activity
+            android:name=".mediPack.MeditationYoga"
+            android:exported="false"
+            android:label="Meditation Yoga" />
+        <activity
+            android:name=".audioTherapyPack.AudioTherapy"
+            android:exported="false"
+            android:label="Audio Therapy"
+            android:parentActivityName=".ExploreSarathi" />
+        <activity
+            android:name=".selfHelpBooksPack.SelfHelpBooks"
+            android:exported="false"
+            android:label="Self Help Books" />
+        <activity
+            android:name=".ExploreSarathi"
+            android:exported="false"
+            android:label="Explore Sarathi"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".egitaPack.EGita"
+            android:exported="false"
+            android:parentActivityName=".ExploreSarathi" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
