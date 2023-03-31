@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:padding="10dp">
 
   <androidx.cardview.widget.CardView
@@ -26,7 +25,7 @@
           android:layout_width="50dp"
           android:layout_height="50dp"
           android:layout_margin="10dp"
-          android:src="@drawable/man" />
+          android:src="@drawable/peace" />
 
       <TextView
           android:id="@+id/message_send"
@@ -35,6 +34,7 @@
           android:layout_gravity="center_vertical"
           android:layout_margin="5dp"
           android:textSize="16sp"
+          android:fontFamily="@font/ubuntu_medium"
           android:gravity="center"
           android:padding="3dp"
           android:textStyle="bold"
@@ -54,7 +54,6 @@
 
 
   <androidx.cardview.widget.CardView
-      android:id="@+id/cv2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       app:cardCornerRadius="10dp"
@@ -83,37 +82,18 @@
           android:layout_gravity="center_vertical"
           android:layout_margin="5dp"
           android:textSize="16sp"
+          android:fontFamily="@font/ubuntu_medium"
           android:gravity="center"
           android:padding="3dp"
           android:textStyle="bold"
           android:text="User message"
           android:textColor="@color/off_white" />
 
-      <!--we are displaying user icon-->
-      <!--      <ImageView-->
-      <!--          android:layout_width="50dp"-->
-      <!--          android:layout_height="50dp"-->
-      <!--          android:layout_margin="10dp"-->
-      <!--          android:src="@drawable/man" />-->
-
 
     </LinearLayout>
   </androidx.cardview.widget.CardView>
 
-<!--  <TextView-->
-<!--      android:id="@+id/message_receive"-->
-<!--      android:layout_width="wrap_content"-->
-<!--      android:layout_height="wrap_content"-->
-<!--      android:background="@color/lavender"-->
-<!--      android:text="response"-->
-<!--      android:layout_marginTop="10dp"-->
-<!--      android:textColor="@android:color/black"-->
-<!--      android:textSize="20sp"-->
-<!--      app:layout_constraintBottom_toBottomOf="parent"-->
-<!--      app:layout_constraintLeft_toLeftOf="parent"-->
-<!--      app:layout_constraintTop_toBottomOf="@+id/cv1">-->
 
-<!--  </TextView>-->
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

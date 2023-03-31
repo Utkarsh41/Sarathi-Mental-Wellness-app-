@@ -1,70 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/layout_background"
+    android:background="@color/spiritualui"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/imageSlider"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        app:iss_auto_cycle="true"
         android:padding="12dp"
-        app:iss_period="5000"
+        app:iss_auto_cycle="true"
         app:iss_corner_radius="18"
+        app:iss_delay="4000"
+        app:iss_period="5000"
         app:iss_title_background="@drawable/gradient"
+        app:layout_constraintBottom_toTopOf="@id/howaruCv"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/howAreYourTv"
-        app:iss_delay="4000">
+        app:layout_constraintTop_toTopOf="parent">
 
     </com.denzcoskun.imageslider.ImageSlider>
 
-<!--    <ImageView-->
-<!--        android:layout_width="390dp"-->
-<!--        android:layout_height="210dp"-->
-<!--        android:id="@+id/imageSlider"-->
-<!--        android:src="@drawable/krishna"-->
-<!--       -->
-<!--        >-->
 
-<!--    </ImageView>-->
-
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quotesCv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/quoteTv"
-        android:text="@string/quote_of_the_day"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:textColor="@color/off_white"
-        android:padding="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight=".5"
+        android:backgroundTint="@color/lavender"
+        app:cardCornerRadius="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statesLL"
+        app:layout_constraintTop_toBottomOf="@+id/statesLL">
 
-        android:gravity="center_horizontal">
-    </TextView>
+        <TextView
+            android:id="@+id/quoteTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/marko_one"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="@string/quote_of_the_day"
+            android:textAlignment="center"
+            android:textColor="@color/off_white"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statesLL">
+
+        </TextView>
+    </androidx.cardview.widget.CardView>
+
 
     <ImageView
-        android:layout_width="180dp"
-        android:layout_height="130dp"
         android:id="@+id/mentalStateIv"
-        android:src="@drawable/facescale"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
         android:layout_marginTop="5dp"
+        android:src="@drawable/facescale"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/howAreYourTv"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/howaruCv">
 
     </ImageView>
 
@@ -74,84 +86,97 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="18dp"
+        android:progressTint="#ff4c4c"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mentalStateIv"
-        android:layout_marginTop="20dp"
-        android:progressTint="#ff4c4c">
-    </SeekBar>
+        app:layout_constraintTop_toBottomOf="@id/mentalStateIv" />
 
     <LinearLayout
         android:id="@+id/statesLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/seekbarForMstate"
-        >
+        app:layout_constraintTop_toBottomOf="@id/seekbarForMstate">
+
         <TextView
-            android:id="@+id/sadTv"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textColor="@color/off_white"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/marko_one"
             android:text="Sad"
-            >
-
-        </TextView><TextView
-            android:id="@+id/normalTv"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/lavender"
             android:textSize="16sp"
-        android:textStyle="bold"
-
-        android:textAlignment="center"
-            android:textColor="@color/off_white"
-            android:layout_height="wrap_content"
-            android:text="Normal"
-            >
+            android:textStyle="bold">
 
         </TextView>
-        <TextView
-            android:id="@+id/happyTv"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textStyle="bold"
 
-            android:textAlignment="center"
-            android:textColor="@color/off_white"
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/marko_one"
+            android:text="Normal"
+            android:textAlignment="center"
+            android:textColor="@color/lavender"
+            android:textSize="16sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/marko_one"
             android:text="Happy"
-            >
+            android:textAlignment="center"
+            android:textColor="@color/lavender"
+            android:textSize="16sp"
+            android:textStyle="bold">
 
         </TextView>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/howAreYourTv"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/howaruCv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="18dp"
+        android:backgroundTint="@color/lavender"
+        app:cardCornerRadius="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/mentalStateIv"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageSlider"
-        android:textAlignment="center"
-        android:textColor="@color/off_white"
-        android:layout_height="wrap_content"
-        android:text="How are your feeling today ?"
-        >
 
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/imageSlider">
+
+        <TextView
+            android:id="@+id/howAreYourTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/marko_one"
+            android:padding="3dp"
+            android:text="How are your feeling today ?"
+            android:textAlignment="center"
+            android:textColor="@color/off_white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="260dp">
+
+        </TextView>
+    </androidx.cardview.widget.CardView>
 
 
     <android.widget.Button
@@ -160,22 +185,22 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/buttonbackground"
+        android:fontFamily="@font/marko_one"
         android:text="Explore Sarathi"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:textStyle="bold">
-
+        app:layout_constraintTop_toBottomOf="@id/quotesCv">
     </android.widget.Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

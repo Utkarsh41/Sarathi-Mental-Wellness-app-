@@ -1,439 +1,474 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/layout_background"
+    android:background="@color/spiritualui"
     tools:context=".ExploreSarathi">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/chatBotLL"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_weight=".2"
-            android:layout_width="80dp"
-            android:layout_height="90dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/krishna"
-            android:layout_gravity="center"
-            >
-
-        </ImageView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_KrishnaChatbot"
-        android:layout_width="80dp"
-        android:layout_weight=".6"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="@color/lavender"
-        app:cardCornerRadius="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_cardView"
+        <LinearLayout
+            android:id="@+id/chatBotLL"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gitandBooksll">
 
-            <TextView
-                android:id="@+id/talktvChatbot"
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_KrishnaChatbot"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="6dp"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:text="@string/Talk_krishna"
-                android:textColor="@color/white"
-                android:textSize="28sp"
-                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/lavender"
+                app:cardCornerRadius="28sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/krishna"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/Talk_krishna"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gitandBooksll"
-        android:orientation="horizontal"
-        android:padding="4dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatBotLL"
-        >
-
-        <!--Gita Cardview-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_Gita"
-            android:layout_weight=".4"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_marginTop="30dp"
-
-            android:layout_marginLeft="5dp"
-            android:backgroundTint="@color/lavender"
-            app:cardCornerRadius="24sp"
+        <LinearLayout
+            android:id="@+id/gitandBooksll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--Gita Cardview-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_Gita"
+                android:layout_width="80dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:backgroundTint="@color/lavender"
+                app:cardCornerRadius="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/gitaIv"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/poetry"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/marko_one"
+                        android:text="E-Gita"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gitaIv" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!---->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_Selfhelpbook"
+                android:layout_width="80dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:backgroundTint="@color/lavender"
+                app:cardCornerRadius="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/selfHelpBookIv"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/bookshelf"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/selfhelpB"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/selfHelpBookIv" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/audioNdMedill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_cardViewGita"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
+            <!--Audio Cardview-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_Audiotherapy"
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:backgroundTint="@color/lavender"
+                app:cardCornerRadius="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
 
-                <ImageView
-                    android:id="@+id/gitaIv"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="1dp"
-                    android:src="@drawable/poetry"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/gitaTv"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
 
-                </ImageView>
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
 
-                <TextView
-                    android:id="@+id/gitaTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="E-Gita"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/gitaIv"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/audioTherapyIv"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/musictherapy"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/audio"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/audioTherapyIv" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <!---->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_Selfhelpbook"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_weight=".6"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="@color/lavender"
-            app:cardCornerRadius="24sp"
+            <!---->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_MeditationndYoga"
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:backgroundTint="@color/lavender"
+                app:cardCornerRadius="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/MeditationndYogaIv"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/meditation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/mediYoga"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/MeditationndYogaIv" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gamesLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_cardViewSelfHelpBooks"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
-
-                <ImageView
-                    android:id="@+id/selfHelpBookIv"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="1dp"
-                    android:src="@drawable/bookshelf"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/gitaTv"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/shelpbooksTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/selfhelpB"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/selfHelpBookIv"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp"
-        android:id="@+id/audioNdMedill"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gitandBooksll"
-        >
-
-        <!--Gita Cardview-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_Audiotherapy"
-            android:layout_weight=".4"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="5dp"
-            android:backgroundTint="@color/lavender"
-            app:cardCornerRadius="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_cardViewGita"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
-
-                <ImageView
-                    android:id="@+id/audioTherapyIv"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="1dp"
-                    android:src="@drawable/musictherapy"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/gitaTv"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/audioTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:text="@string/audio"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/audioTherapyIv"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <!---->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_MeditationndYoga"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_weight=".6"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="@color/lavender"
-            app:cardCornerRadius="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_cardViewSelfHelpBooks"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
-
-                <ImageView
-                    android:id="@+id/MeditationndYogaIv"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="1dp"
-                    android:src="@drawable/meditation"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/gitaTv"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/MeditationndYogaTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/mediYoga"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/MeditationndYogaIv"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp"
-        android:id="@+id/gamesNdActivityll"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/audioNdMedill"
-        >
-
-        <!--Games Cardview-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewGames"
-            android:layout_weight=".5"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="5dp"
-            android:backgroundTint="@color/lavender"
-            app:cardCornerRadius="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/audioNdMedill">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_cardViewGamesActivity"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
+            <!--Games Cardview-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewGames"
+                android:layout_width="60dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:backgroundTint="@color/lavender"
+                app:cardCornerRadius="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/audioNdMedill">
 
-                <ImageView
-                    android:id="@+id/gamesIv"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="1dp"
-                    android:src="@drawable/mobilegame"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/gitaTv"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
 
-                </ImageView>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/mobilegame"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/gamesTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="5dp"
-                    android:text="Games"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/audioTherapyIv"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/marko_one"
+                        android:text="Games"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <!---->
+            <!---->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_ActivityProgress"
+                android:layout_width="60dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".5"
+                android:backgroundTint="@color/lavender"
+                app:cardCornerRadius="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/ActivityProgressIv"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/barchart"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/marko_one"
+                        android:text="@string/activityProgress"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ActivityProgressIv" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_ActivityProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="75dp"
-            android:layout_weight=".5"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="@color/lavender"
-            app:cardCornerRadius="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatBotLL">
+            android:id="@+id/storySarathiCv"
+            android:layout_width="385dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gamesLL">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_cardViewActivityProgress"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp">
+                android:layout_height="wrap_content">
+
 
                 <ImageView
-                    android:id="@+id/ActivityProgressIv"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="1dp"
-                    android:src="@drawable/barchart"
+                    android:id="@+id/imageViewSarStory"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".2"
+                    android:src="@drawable/fairytale"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/gitaTv"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/ActivityProgressTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="8dp"
-                    android:text="@string/activityProgress"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/marko_one"
+                    android:text="Stories"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="28sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ActivityProgressIv"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewSarStory"
                     app:layout_constraintTop_toTopOf="parent" />
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         </androidx.cardview.widget.CardView>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

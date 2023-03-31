@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Sarathi</string>
     <string name="sarathi">Sarathi</string>
-    <string name="ExtendedWelcome">Welcome to the world of Shri Krishna</string>
+    <string name="ExtendedWelcome">Welcome to the world of\n\t\t\t\t\t\t\t Shri Krishna</string>
     <string name="quote_of_the_day">Quote of the day</string>
-    <string name="Talk_krishna">Talk To\nShri Krishna</string>
-    <string name="audio">Audio\ntherapy</string>
-    <string name="mediYoga">Meditation &amp;\nYoga</string>
+    <string name="Talk_krishna">Talk To Kanha</string>
+    <string name="audio">\tAudio\ntherapy</string>
+    <string name="mediYoga">Meditation\n\t\t\t&amp;\tYoga</string>
     <string name="activityProgress">Activity\nProgress</string>
-    <string name="selfhelpB">Self help\nBooks</string>
-    <string name="start_talking">Start talking</string>
+    <string name="selfhelpB">Self help\n\t\tBooks</string>
+    <string name="start_talking">Message</string>
 
     <string name="game1text">Math is Fun! Games</string>
     <string name="game2text">Mind Games</string>
@@ -16,5 +16,100 @@
     <string name="game4text">Poki Games!</string>
     <string name="game5text">Fast Games</string>
     <string name="gamestitle">Games</string>
+
+    <string name="How">HOW TO DO IT?\n\n</string>
+    <string name="caution">CAUTION:\n\n</string>
+
+    <string name="Virabhadrasana">VIRBHADRASANA\n(The Warrior Pose)</string>
+    <string name="VirabhadrasanaD">It requires focus and steady breathing.</string>
+    <string name="VirbhadrasanaH">1. While on two feet, spread your legs wide, turn your hips to one side, turn your ankles to the side you are facing.\n2. Bend the front leg to a 90-degree angle.\n3. Stretch your arms to your sides and breathe in deeply and evenly for 10 seconds.</string>
+    <string name="VirbhadrasanaC">Make sure your ankles are always in line with your knee, breathe evenly and do not hold the pose for long periods if your body is shaking. Ensure you only do this pose under  the supervision of a professional.</string>
+
+    <string name="Natarajasana">NATARAJASANA\n(The Dancer\'s Pose).</string>
+    <string name="NatarajasanaD">This asana is great for mood balancing.It can be beneficial for those who are fighting depression and anxiety.</string>
+    <string name="NatarajasanaH">1. With both legs planted on the ground, bend one knee back; using your arm, grip the ankle.\n2. Slowly keeping a steady posture, lean forward and lift your ankle towards the sky.\n3. Extend your free hand in front of you.\n4. Take 5 deep and even breaths</string>
+    <string name="NatarajasanaC">Doing this pose quickly and at an early stage of yoga can be very harmful to your body. Do not attempt this without supervision. Do not do this if you have any injuries to the knees or ankles.</string>
+
+    <string name="Vriksasana">VRIKSASANA\n(The Tree Pose)</string>
+    <string name="VriksasanaD">This asana is very basic and helps improve your sense of self and centres your body and mind.</string>
+    <string name="VriksasanaH">1. While standing straight with ankles flat on the ground, lift one leg and place the ankle on the inner part of your opposite thigh.\n2. This will bend your knee outward.\n3. Balance and stretch your arms skyward and connect your palms.</string>
+    <string name="VriksasanaC">Ensure you keep your body straight and try balancing while breathing evenly.</string>
+
+    <string name="Anjaneyasana">ANJANEYASANA\n(The High Lunge)</string>
+    <string name="AnjaneyasanaD">Doing the crescent variation of this exercise is known to help improve your blood flow, calm your mind.</string>
+    <string name="AnjaneyasanaH">1. While standing, lunge one leg forward.\n2. Bend the front knee, make sure your knee is in line with your ankle, stretch your back leg.\n3. Press your ankle flat against the ground on both ankles.\n4. Raise your arms to the sky and connect your palms.\n5. Breathe in deeply and breathe out in an even flow.\n6. Repeat 5 times per leg.</string>
+    <string name="AnjaneyasanaC">Ensure your knee is in line with your ankle and your front knee is at a 90-degree angle. If you perform it incorrectly, it could harm your joints.</string>
+
+    <string name="Garudasana">GARUDASANA (The Eagle Pose)</string>
+    <string name="GarudasanaD">This pose requires you to breathe while holding your body in balance. It helps prevent anxiety attacks while improving your focus.</string>
+    <string name="GarudasanaH">1. Breathe in deep, shift the weight of your body onto one leg.\n2. Slowly wrap one leg around the other.\n3. Sink your hips and gently bend your knees.\n4. Keep your ankle flat on the ground.\n5. Keep your breathing even and slow.\n6. Wrap one arm around the other at the elbows and wrists.</string>
+    <string name="GarudasanaC">Do not perform this pose alone, it can require balance and a lot of focus, ensure you do each part of the pose slowly and if you feel any pain, stop and restart after a break.</string>
+
+    <string name="AdhoMukhaVrksasana">Adho Mukha Vrksasana (Handstand)</string>
+    <string name="AdhoMukhaVrksasanaD">This is not a pose for beginners, this asana is a basic handstand.</string>
+    <string name="AdhoMukhaVrksasanaH">1. While standing with your ankles flat on the ground, bend forward to place your palms to the ground. Ensure your back is straight as are your knees.\n2. Begin to gently shift your weight onto your arms.\n3. Slowly begin to lift one leg straight up above your hips.\n4. Then brace your weight and do it for the second leg.</string>
+    <string name="AdhoMukhaVrksasanaC">Ensure your body remains straight throughout, keep your legs in line with your hips and ensure a professional is present with you. Do not try this alone.</string>
+
+    <string name="Chakrasana">CHAKRASANA\n(The Circle Pose)</string>
+    <string name="ChakrasanaD">It helps your calmness and focus.</string>
+    <string name="ChakrasanaH">1. While standing, place your arms high above your head.\n2. Keeping your back straight, bend backwards.\n3. Do this slowly and till your palms reach the floor behind you.\n4. Keep your ankles firmly on the ground.</string>
+    <string name="ChakrasanaC">Remember to do this with a professional present as it can be dangerous. Do not make rigid and fast movements and keep your breath on the same track as your body movements.</string>
+
+    <string name="Vajrasana">VAJRASANA\n(The Meditative Pose)</string>
+    <string name="VajrasanaD">It improves focus, calmness and digestion.</string>
+    <string name="VajrasanaH">1. Slowly, begin by sitting on your knees, stretch your ankles outward, bring your thighs and calves together.\n2. Then place your palms on your knees.\n3. Breathe in and out deeply for 30 seconds to a minute.</string>
+    <string name="VajrasanaC">This is a fairly basic yoga pose, ensure you keep an eye on your knees and ankles, if they hurt, stretch them out. Do not do this pose for too long at one time as it can affect the blood circulation in your legs.</string>
+
+    <string name="Padmasana">PADMASANA\n(The Lotus Pose)</string>
+    <string name="PadmasanaD">This helps your digestion, spinal strength and improves calmness of the mind and also your mood. It helps keep your anxiety and depression at bay.</string>
+    <string name="PadmasanaH">1. While sitting cross-legged, gently lift one ankle above your opposite thigh.\n2. Place it as close to the hip as possible, do the same with the other ankle.\n3. Place your palms on your knees, keep your back straight.\n4. Breathe evenly for 30 seconds.</string>
+    <string name="PadmasanaC">If you cannot complete the pose, try slowly and to the extent you can. Do not force this asana, it may harm your body physically.</string>
+
+    <string name="Savasana">SAVASANA\n(The Dead Body Pose)</string>
+    <string name="SavasanaD">This asana is similar to lying down to take a nap. It is extremely easy to do.</string>
+    <string name="SavasanaH">1. Lay flat on the ground, stretch your legs out.\n2. Stretch your arms beside you and let your palms face skyward.\n3. Close your eyes, maintain even breathing while your focus wanders around you.\n4. Listen to the sounds and continue breathing for 5 minutes.</string>
+    <string name="SavasanaC">Ensure you are aware of your surroundings and keep your eyes closed. Do not fall asleep during this asana.</string>
+
+    <string name="AltNosB">ALTERNATE NOSTRIL BREATHING</string>
+    <string name="AltNosBD">It balances the nervous system and reduces the stress.It lowers blood pressure as well as improves breathing.</string>
+    <string name="AltNosBH">1. Position your right hand by bending your pointer and middle fingers into your palm, leaving your thumb, ring finger, and pinky extended. This is known as Vishnu mudra in yoga.\n2. Close your eyes or softly gaze downward.\n3. Inhale and exhale to begin.\n4. Close off your right nostril with your thumb.\n5. Inhale through your left nostril.\n6. Close off your left nostril with your ring finger.\n7. Open and exhale through your right nostril.\n8. Inhale through your right nostril.\n9. Close off your right nostril with your thumb.\n10. Open and exhale through your left nostril.\n11. Inhale through your left nostril.</string>
+    <string name="AltNosBT">Try to do five minutes of alternate nostril breathing per day to reap the most benefits.</string>
+
+    <string name="BellyB">BELLY BREATHING</string>
+    <string name="BellyBD">It helps to reduce stress and anxiety.Try to do it in a comfortable and quiet place such as sitting on chair or sitting cross-legged.</string>
+    <string name="BellyBH">1. Place one hand on your upper chest and the other hand on your belly, below the ribcage.\n2. Allow your belly to relax, without forcing it inward by squeezing or clenching your muscles.\n3. Breathe in slowly through your nose. The air should move into your nose and downward so that you feel your stomach rise with your other hand and fall inward (toward your spine).\n4.Exhale slowly through slightly pursed lips. Take note of the hand on your chest, which should remain relatively still.</string>
+    <string name="BellyBT">Try to do belly breathing 3 times a day for 10 minutes.</string>
+
+    <string name="BoxB">BOX BREATHING</string>
+    <string name="BoxBD">It helps to slow down your breathing. It works by distracting your mind as you count to four, calming your nervous system, and decreasing stress in your body.</string>
+    <string name="BoxBH">1. Exhale to a count of four.\n2. Hold your lungs empty for a four-count.\n3. Inhale to a count of four.\n4. Hold the air in your lungs for a count of four.\n5. Exhale and begin the pattern anew.</string>
+    <string name="BoxBT">Do box breathing several times a day as needed to calm your nerves and relieve stress.</string>
+
+    <string name="B487">4 7 8 BREATHING</string>
+    <string name="B487D">It is also called the relaxing breath,acts as a natural tranquilizer for the nervous system.</string>
+    <string name="B487H">1. Place and keep the tip of your tongue against the ridge of tissue behind your upper front teeth for the duration of the exercise.\n2. Completely exhale through your mouth, making a whoosh sound.\n3. Close your mouth and inhale quietly through your nose to a mental count of four.\n4. Hold your breath for a count of seven.\n5. Exhale completely through your mouth, making a whoosh sound to a count of eight.</string>
+    <string name="B487T">Try to practice at least twice a day.Only do it for four cycles in a row in the beginning. After you get used to it, you can work up to eight cycles.</string>
+
+    <string name="LionB">LION BREATH</string>
+    <string name="LionBD">It can help relax the muscles in your face and jaw,alleviate stress, and improve cardiovascular function.</string>
+    <string name="LionBH">1. Spread your fingers as wide as possible.\n2. Inhale through your nose.\n3. Open your mouth wide, stick out your tongue, and stretch it down toward your chin.\n4. Exhale forcefully, carrying the breath across the root of your tongue.\n5. While exhaling, make a ha sound that comes from deep within your abdomen.\n6. Breathe normally for a few moments.</string>
+    <string name="LionBT">Repeat lion breath up to 7 times. Finish by breathing deeply for 1 to 3 minutes.</string>
+
+    <string name="MindB">MINDFULNESS BREATHING</string>
+    <string name="MindBD">Mindfulness meditation involves focusing on your breathing and bringing your attention to the present without allowing your mind to drift to the past or future.It helps to reduce stress and anxiety.</string>
+    <string name="MindBH">1. Sit comfortably with your back straight, feet flat on the floor and hands in your lap.\n2. Breathing through your nose, focus on your breath moving in and out of your body.\n3. If physical sensations or thoughts interrupt your meditation, note the experience and then return your focus to your breath.</string>
+    <string name="MindBT">Try to do it 10 minutes a day.</string>
+
+    <string name="PurseB">PURSED LIP BREATHING</string>
+    <string name="PurseBD">It will help make deep breaths slower and more intentional. This technique has been found to benefit people who have anxiety associated with lung conditions like emphysema and chronic obstructive pulmonary disease.</string>
+    <string name="PurseBH">1. Sit in a comfortable position with your neck and shoulders relaxed.\n2. Keeping your mouth closed, inhale slowly through your nostrils for two seconds.\n3. Exhale through your mouth for four seconds, puckering your lips as if giving a kiss.\n4. Keep your breath slow and steady while breathing out.</string>
+    <string name="PurseBT">Try to do it four to five times a day.</string>
+
+    <string name="ResonanceB">RESONANCE BREATHING</string>
+    <string name="ResonanceBD">It is also known as coherent breathing. It can help to relax the body and reduce anxiety.</string>
+    <string name="ResonanceBH">1. Lie down and close your eyes.\n2. Gently breathe in through your nose, mouth closed, for a count of six seconds. Don\'t fill your lungs too full of air.\n3. Exhale for six seconds, allowing your breath to leave your body slowly and gently without forcing it.\n4. Continue for up to 10 minutes.\n5. Take a few additional minutes to be still and focus on how your body feels.</string>
+    <string name="ResonanceBT">Try to do it in two sessions each day for 20 minutes.</string>
+    <string name="message">Message</string>
+
 
 </resources>

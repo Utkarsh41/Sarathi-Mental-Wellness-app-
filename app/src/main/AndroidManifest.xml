@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
@@ -14,9 +18,52 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarathi"
         tools:targetApi="31">
+        <activity android:name=".activityPack.moodtrack.NoteHistory"
+            android:exported="false"
+            android:label="Mood History"
+            android:parentActivityName=".activityPack.moodtrack.MoodTracker"
+            />
+        <activity android:name=".activityPack.moodtrack.MoodHistory"
+            android:exported="false"
+            android:label="Mood History"
+            android:parentActivityName=".activityPack.moodtrack.MoodTracker"
+            />
+        <activity android:name=".activityPack.moodtrack.MoodTest"
+            android:exported="false"
+            android:label="Mood Test"
+            android:parentActivityName=".activityPack.moodtrack.MoodTracker"
+            />
+        <activity
+            android:name=".stories.KrishnaStoriesActivity"
+            android:label="Shri Krishna's Stories"
+            android:exported="false" />
+        <activity
+            android:name=".activityPack.sleepcycle.StartSleep"
+            android:exported="false"
+            android:label="Sleep Tracker"
+            android:parentActivityName=".activityPack.sleepcycle.SleepCycleM" />
+        <activity
+            android:name=".activityPack.sleepcycle.SleepHistory"
+            android:exported="false"
+            android:label="Sleep History" />
+        <activity
+            android:name=".activityPack.mobileusage.MobileUsage"
+            android:exported="false"
+            android:label="Mobile Usage" />
+        <activity
+            android:name=".activityPack.sleepcycle.SleepCycleM"
+            android:exported="false"
+            android:label="Sleep Tracker" />
+        <activity
+            android:name=".activityPack.moodtrack.MoodTracker"
+            android:exported="false"
+            android:label="Mood Tracker"
+            android:parentActivityName=".activityPack.ActivityProgressTrack"/>
         <activity
             android:name=".sarathiChatbot.SrMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Kahna"
+            android:parentActivityName=".ExploreSarathi" />
         <activity
             android:name=".selfHelpBooksPack.ViewPdf"
             android:exported="false"
@@ -24,19 +71,42 @@
         <activity
             android:name=".activityPack.ActivityProgressTrack"
             android:exported="false"
-            android:label="Activity Progress" />
+            android:label="Activity Progress"
+            android:parentActivityName=".ExploreSarathi" />
         <activity
             android:name=".gamepack.GameView"
             android:exported="false"
-             />
+            android:parentActivityName=".gamepack.Games" />
         <activity
             android:name=".gamepack.Games"
             android:exported="false"
-            android:label="Games" />
+            android:label="Games"
+            android:parentActivityName=".ExploreSarathi" />
         <activity
             android:name=".mediPack.MeditationYoga"
             android:exported="false"
-            android:label="Meditation Yoga" />
+            android:label="Meditation Yoga"
+            android:parentActivityName=".ExploreSarathi" />
+        <activity
+            android:name=".mediPack.Breathingdes"
+            android:exported="false"
+            android:label="Breathing Exercise"
+            android:parentActivityName=".mediPack.BreathingEx" />
+        <activity
+            android:name=".mediPack.BreathingEx"
+            android:exported="false"
+            android:label="Breathing Exercise"
+            android:parentActivityName=".mediPack.MeditationYoga" />
+        <activity
+            android:name=".mediPack.Yoga"
+            android:exported="false"
+            android:label="Yoga"
+            android:parentActivityName=".mediPack.MeditationYoga" />
+        <activity
+            android:name=".mediPack.Yogades"
+            android:exported="false"
+            android:label="Yoga"
+            android:parentActivityName=".mediPack.Yoga" />
         <activity
             android:name=".audioTherapyPack.AudioTherapy"
             android:exported="false"
@@ -45,7 +115,8 @@
         <activity
             android:name=".selfHelpBooksPack.SelfHelpBooks"
             android:exported="false"
-            android:label="Self Help Books" />
+            android:label="Self Help Books"
+            android:parentActivityName=".ExploreSarathi" />
         <activity
             android:name=".ExploreSarathi"
             android:exported="false"
