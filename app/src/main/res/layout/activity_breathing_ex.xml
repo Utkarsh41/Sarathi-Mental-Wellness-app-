@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spiritualui"
+    tools:context=".mediPack.BreathingEx">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Yogacd0"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/SarathiLavendar"
+            app:cardCornerRadius="28dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/Yoga"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/samarkan"
+                android:gravity="center"
+                android:text="Meditation and Breathing Exercises"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Yimg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Yimg"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/img_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Yoga"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd1"
+            android:layout_width="301dp"
+            android:layout_height="135dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp">
+
+            <TextView
+                android:id="@+id/Breathing1"
+                android:layout_width="210dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:fontFamily="@font/marko_one"
+                android:text="Alternate nostril breathing"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing1"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd2"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp"
+            >
+
+            <TextView
+                android:id="@+id/Breathing2"
+                android:layout_width="210dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="Belly breathing"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd3"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp"
+            >
+
+            <TextView
+                android:id="@+id/Breathing3"
+                android:layout_width="223dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="Box breathing"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd4"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp"
+            >
+
+            <TextView
+                android:id="@+id/Breathing4"
+                android:layout_width="223dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="4-7-8 Breathing"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing4"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd5"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp"
+            >
+
+            <TextView
+                android:id="@+id/Breathing5"
+                android:layout_width="223dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="Lion breath"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing5"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd6"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp"
+            >
+
+            <TextView
+                android:id="@+id/Breathing6"
+                android:layout_width="223dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="Mindfulness\nbreathing"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg6"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing6"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd7"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp"
+            >
+
+            <TextView
+                android:id="@+id/Breathing7"
+                android:layout_width="223dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="Pursed-lip\nbreathing"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg7"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing7"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Breathingcd8"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/lavender"
+            app:cardCornerRadius="28dp"
+            >
+
+            <TextView
+                android:id="@+id/Breathing8"
+                android:layout_width="223dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:text="Resonance\nbreathing"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/Bimg8"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Bimg8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/yogam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Breathing8"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+

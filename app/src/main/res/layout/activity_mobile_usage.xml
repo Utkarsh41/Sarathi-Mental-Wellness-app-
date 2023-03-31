@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spiritualui"
+    tools:context=".activityPack.mobileusage.MobileUsage">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/Appcd0"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="#8692F7"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/Yogaimg0"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/mobileusage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Yoga0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="55dp"
+                android:gravity="end"
+                android:text="Daily Mobile Usage"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/samarkan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/Yogaimg0"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.504" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/Appcd1"
+        android:layout_height="500dp"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="#B4D3B2"
+        app:layout_constraintTop_toBottomOf="@+id/Appcd0"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/img"
+                android:src="@drawable/screenprotector"
+                android:backgroundTint="@color/white"
+                android:outlineAmbientShadowColor="@color/black"
+                >
+
+            </ImageView>
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="385dp"
+                android:layout_height="500dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/off_white"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+            </ListView>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
