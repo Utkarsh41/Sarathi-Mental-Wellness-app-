@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +7,19 @@
     android:background="@color/spiritualui"
     tools:context=".gamepack.Games">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/TitleCV"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_margin="20dp"
-        android:padding="20dp"
         android:layout_marginTop="30dp"
+        android:padding="20dp"
         app:cardBackgroundColor="@color/SarathiLavendar"
         app:cardCornerRadius="28dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,7 +35,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/gamesimage"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/GamesText"
@@ -56,17 +61,36 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/Desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/TitleCV"
+        android:layout_margin="30dp"
+        app:cardBackgroundColor="@color/lavender"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/marko_one"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:text="@string/productive_utilization_of_free_time_can_aid_in_refocusing_one_s_attention_nengaging_in_games_can_be_an_effective_means_of_utilizing_that_time_and_rejuvenating_oneself"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/Game1CV"
         android:layout_width="170dp"
         android:layout_height="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="5dp"
         app:cardBackgroundColor="@color/SarathiLavendar"
         app:cardCornerRadius="28dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/Game2CV"
-        app:layout_constraintTop_toBottomOf="@id/TitleCV">
+        app:layout_constraintTop_toBottomOf="@id/Desc">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -104,14 +128,14 @@
         android:id="@+id/Game2CV"
         android:layout_width="170dp"
         android:layout_height="100dp"
-        android:layout_marginTop="80dp"
-       android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="30dp"
         app:cardBackgroundColor="@color/SarathiLavendar"
         app:cardCornerRadius="28dp"
         app:layout_constraintLeft_toRightOf="@id/Game1CV"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/TitleCV">
+        app:layout_constraintTop_toBottomOf="@id/Desc">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -239,12 +263,13 @@
         android:id="@+id/Game5CV"
         android:layout_width="170dp"
         android:layout_height="100dp"
-        android:layout_margin="20dp"
-        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="5dp"
         app:cardBackgroundColor="@color/SarathiLavendar"
         app:cardCornerRadius="28dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Game6CV"
         app:layout_constraintTop_toBottomOf="@id/Game3CV">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -253,7 +278,7 @@
                 android:id="@+id/Game5Image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/game5image"
+                android:src="@drawable/game6image"
                 android:layout_marginLeft="60dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -278,6 +303,143 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Game6CV"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="30dp"
+        app:cardBackgroundColor="@color/SarathiLavendar"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/Game5CV"
+        app:layout_constraintTop_toBottomOf="@id/Game4CV">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/Game6Image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/game5image"
+                android:layout_marginLeft="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Game6Text"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Game6Text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginRight="50dp"
+                android:text="Entanglement"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/Game6Image"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Game7CV"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="5dp"
+        app:cardBackgroundColor="@color/SarathiLavendar"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/Game8CV"
+        app:layout_constraintTop_toBottomOf="@id/Game5CV">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/Game7Image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/game7image"
+                android:layout_marginLeft="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Game7Text"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Game7Text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginRight="50dp"
+                android:text="Gridland"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/Game7Image"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Game8CV"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="30dp"
+        app:cardBackgroundColor="@color/SarathiLavendar"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/Game7CV"
+        app:layout_constraintTop_toBottomOf="@id/Game6CV">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/Game8Image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/game8image"
+                android:layout_marginLeft="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Game8Text"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Game8Text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginRight="50dp"
+                android:text="Threesjs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/Game8Image"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

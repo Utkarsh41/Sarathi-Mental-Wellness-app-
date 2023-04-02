@@ -16,14 +16,17 @@ import java.util.List;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongAdapterViewHolder> {
 
-//    private AdapterView.OnItemClickListener
-
     Context context;
     List<AudioModel>ListAudioModels;
 
     public SongAdapter(Context context, List<AudioModel> listAudioModels) {
         this.context = context;
         ListAudioModels = listAudioModels;
+    }
+
+    public void filterList(List<AudioModel> filterlist) {
+        ListAudioModels = filterlist;
+        notifyDataSetChanged();
     }
 
     @NonNull

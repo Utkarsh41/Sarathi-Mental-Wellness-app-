@@ -8,13 +8,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -32,6 +36,7 @@ import com.utkarsh.scientific.sarathi.selfHelpBooksPack.ViewPdf;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class AudioTherapy extends AppCompatActivity {
 
@@ -55,11 +60,11 @@ public class AudioTherapy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audio_therapy);
-//        mPlayButton  = findViewById(R.id.playButton);
-//        loadAudioSetup();
 
         pd = new ProgressDialog(this);
-        floatingActionButton = findViewById(R.id.fabPause);
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.fabPause);
+
+        floatingActionButton.setColorFilter(Color.WHITE);
         databaseReference = FirebaseDatabase.getInstance().getReference().child("audioTherapy");
         mRecyclerView = findViewById(R.id.myRecyclerViewAudio);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -68,6 +73,9 @@ public class AudioTherapy extends AppCompatActivity {
         mRecyclerView.setAdapter(songAdapter);
         progressBar = findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.VISIBLE);
+
+        Toast.makeText(this, "Use Headphones For Better Experience", Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Use Headphones For Better Experience", Toast.LENGTH_LONG).show();
 
         valueEventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -224,29 +232,54 @@ public class AudioTherapy extends AppCompatActivity {
         mediaPlayer.prepareAsync();
     }
 
-/***
-    private void playAudio(String audioUrl) {
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.searchmenu,menu);
+    MenuItem item=menu.findItem(R.id.search);
 
-        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+    SearchView searchView = (SearchView) item.getActionView();
 
-        // below line is use to set our
-        // url to our media player.
-        try {
-            mediaPlayer.setDataSource(audioUrl);
-            // below line is use to prepare
-            // and start our media player.
-            mediaPlayer.prepare();
-            mediaPlayer.start();
-
-        }  catch (IOException e) {
-            throw new RuntimeException(e);
+    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        @Override
+        public boolean onQueryTextSubmit(String s) {
+            filterSearch(s);
+            return false;
         }
-        // below line is use to display a toast message.
-        Toast.makeText(this, "Audio started playing..", Toast.LENGTH_SHORT).show();
-        mPlayButton=(ImageView) findViewById(R.id.playButton);
-        mPlayButton.setVisibility(View.GONE);
+
+        @Override
+        public boolean onQueryTextChange(String s) {
+            filterSearch(s);
+            return false;
+        }
+    });
+
+    return super.onCreateOptionsMenu(menu);
+}
 
 
-    }***/
+
+    private void filterSearch(String text) {
+        // creating a new array list to filter our data.
+        List<AudioModel> filteredlist = new ArrayList<AudioModel>();
+
+        // running a for loop to compare elements.
+        for (AudioModel item : audioModelList) {
+            // checking if the entered string matched with any item of our recycler view.
+            if (item.getaTitle().toLowerCase().contains(text.toLowerCase())) {
+                // if the item is matched we are
+                // adding it to our filtered list.
+                filteredlist.add(item);
+            }
+        }
+        if (filteredlist.isEmpty()) {
+            // if no item is added in filtered list we are
+            // displaying a toast message as no data found.
+            Toast.makeText(this, "No Data Found..", Toast.LENGTH_SHORT).show();
+        } else {
+            // at last we are passing that filtered
+            // list to our adapter class.
+            songAdapter.filterList(filteredlist);
+        }
+    }
 
 }

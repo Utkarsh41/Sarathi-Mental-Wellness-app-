@@ -23,23 +23,18 @@ public class SleepHistory extends AppCompatActivity {
         setContentView(R.layout.activity_sleep_history);
 
         coursesRV = findViewById(R.id.idRVCourses);
-        // initializing our all variables.
         sleepModalArrayList = new ArrayList<>();
         dbHandler = new DBHandler(SleepHistory.this);
 
-        // getting our course array
-        // list from db handler class.
         sleepModalArrayList = dbHandler.readCourses();
 
-        // on below line passing our array list to our adapter class.
         sleepAdapter = new SleepAdapter(sleepModalArrayList, SleepHistory.this);
         coursesRV = findViewById(R.id.idRVCourses);
 
-        // setting layout manager for our recycler view.
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(SleepHistory.this, RecyclerView.VERTICAL, false);
         coursesRV.setLayoutManager(linearLayoutManager);
 
-        // setting our adapter to recycler view.
         coursesRV.setAdapter(sleepAdapter);
 
     }

@@ -108,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/marko_one"
                 android:gravity="start"
                 android:padding="15dp"
@@ -122,7 +122,7 @@
                 android:id="@+id/howd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="35dp"
                 android:fontFamily="@font/marko_one"
                 android:gravity="start"
                 android:padding="15dp"
@@ -172,6 +172,24 @@
                 android:textStyle="normal" />
         </androidx.cardview.widget.CardView>
 
+        <android.widget.Button
+            android:id="@+id/watchYogavideo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/buttonbackground"
+            android:fontFamily="@font/marko_one"
+            android:text="Watch Yoga Video"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            >
+        </android.widget.Button>
 
     </LinearLayout>
 

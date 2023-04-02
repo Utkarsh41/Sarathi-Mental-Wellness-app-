@@ -18,25 +18,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarathi"
         tools:targetApi="31">
-        <activity android:name=".activityPack.moodtrack.NoteHistory"
+
+
+        <activity
+            android:name=".AboutUs"
+            android:label="About Us"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activityPack.moodtrack.NoteHistory"
             android:exported="false"
             android:label="Mood History"
-            android:parentActivityName=".activityPack.moodtrack.MoodTracker"
-            />
-        <activity android:name=".activityPack.moodtrack.MoodHistory"
+            android:parentActivityName=".activityPack.moodtrack.MoodTracker" />
+        <activity
+            android:name=".activityPack.moodtrack.MoodHistory"
             android:exported="false"
             android:label="Mood History"
-            android:parentActivityName=".activityPack.moodtrack.MoodTracker"
-            />
-        <activity android:name=".activityPack.moodtrack.MoodTest"
+            android:parentActivityName=".activityPack.moodtrack.MoodTracker" />
+        <activity
+            android:name=".activityPack.moodtrack.MoodTest"
             android:exported="false"
             android:label="Mood Test"
-            android:parentActivityName=".activityPack.moodtrack.MoodTracker"
-            />
+            android:parentActivityName=".activityPack.moodtrack.MoodTracker" />
         <activity
             android:name=".stories.KrishnaStoriesActivity"
-            android:label="Shri Krishna's Stories"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Shri Krishna&apos;s Leela" />
         <activity
             android:name=".activityPack.sleepcycle.StartSleep"
             android:exported="false"
@@ -45,6 +52,7 @@
         <activity
             android:name=".activityPack.sleepcycle.SleepHistory"
             android:exported="false"
+            android:parentActivityName=".activityPack.sleepcycle.SleepCycleM"
             android:label="Sleep History" />
         <activity
             android:name=".activityPack.mobileusage.MobileUsage"
@@ -58,7 +66,7 @@
             android:name=".activityPack.moodtrack.MoodTracker"
             android:exported="false"
             android:label="Mood Tracker"
-            android:parentActivityName=".activityPack.ActivityProgressTrack"/>
+            android:parentActivityName=".activityPack.ActivityProgressTrack" />
         <activity
             android:name=".sarathiChatbot.SrMainActivity"
             android:exported="false"

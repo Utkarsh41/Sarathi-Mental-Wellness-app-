@@ -50,8 +50,17 @@ public class GameView extends AppCompatActivity
             case "Pokigames":
                 url = "https://poki.com/";
                 break;
+            case "Fastgames":
+                url="https://www.fastgames.com/";
+                break;
+            case "Entanglement":
+                url="https://entanglement.gopherwoodstudios.com/en-US-index.html";
+                break;
+            case "Gridland":
+                url="https://gridland.doublespeakgames.com/";
+                break;
             default:
-                url = "https://www.fastgames.com/";
+                url = "http://threesjs.com/";
                 break;
         }
         gwv.loadUrl(url);

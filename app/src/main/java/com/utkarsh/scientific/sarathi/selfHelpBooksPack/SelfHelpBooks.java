@@ -9,9 +9,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 
@@ -24,6 +27,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.utkarsh.scientific.sarathi.R;
+
+import java.util.Locale;
 
 import io.grpc.lb.v1.LoadBalancerGrpc;
 
@@ -90,8 +95,6 @@ public class SelfHelpBooks extends AppCompatActivity {
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
                         intent.setDataAndType(Uri.parse(model.getBookUrl()), "application/pdf");
                         startActivity(Intent.createChooser(intent, "Choose an Application:"));
-//                        startActivity(new Intent(Intent.ACTION_VIEW,
-//                                Uri.parse("http://docs.google.com/gview?embedded=true&url="+model.getBookUrl())));
                     }
                 });
 
@@ -114,19 +117,65 @@ public class SelfHelpBooks extends AppCompatActivity {
         super.onBackPressed();
     }
 
-/*
-    @Override
-    protected void onStart() {
-        super.onStart();
-        bookAdapter.startListening();
-    }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        bookAdapter.stopListening();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.searchmenu,menu);
+        MenuItem item=menu.findItem(R.id.search);
+
+        SearchView searchView = (SearchView) item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                processSearch(s);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                processSearch(s);
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 
- */
+    private void processSearch(String s) {
 
+        FirebaseRecyclerOptions<BookModel>options=
+                new FirebaseRecyclerOptions.Builder<BookModel>()
+                        .setQuery(databaseReference.orderByChild("bookName").startAt(s.toUpperCase(Locale.ENGLISH)).endAt(s+"\uf8ff"),BookModel.class).build();
+
+        FirebaseRecyclerAdapter<BookModel, Adapter> adapter = new FirebaseRecyclerAdapter<BookModel, Adapter>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull Adapter holder, int position, @NonNull BookModel model) {
+
+//                progressBar.setVisibility(View.GONE);
+                holder.bookTitle.setText(model.getBookName());
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+                        intent.setDataAndType(Uri.parse(model.getBookUrl()), "application/pdf");
+                        startActivity(Intent.createChooser(intent, "Choose an Application:"));
+                    }
+                });
+
+            }
+
+            @NonNull
+            @Override
+            public Adapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.mybooks, parent, false);
+                Adapter holder = new Adapter(view);
+                return holder;
+            }
+        };
+
+        mRecyclerView.setAdapter(adapter);
+        adapter.startListening();
+
+    }
 }

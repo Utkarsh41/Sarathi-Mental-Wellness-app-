@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         >
 
     <com.denzcoskun.imageslider.ImageSlider
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/marko_one"
-            android:text="Sad"
+            android:text="@string/distressed"
             android:textAlignment="center"
             android:textColor="@color/lavender"
             android:textSize="16sp"
@@ -122,7 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/marko_one"
-            android:text="Normal"
+            android:text="@string/normal"
             android:textAlignment="center"
             android:textColor="@color/lavender"
             android:textSize="16sp"
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/marko_one"
-            android:text="Happy"
+            android:text="@string/peaceful"
             android:textAlignment="center"
             android:textColor="@color/lavender"
             android:textSize="16sp"
@@ -166,7 +166,7 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/marko_one"
             android:padding="3dp"
-            android:text="How are your feeling today ?"
+            android:text="How are you feeling today ?"
             android:textAlignment="center"
             android:textColor="@color/off_white"
             android:textSize="22sp"

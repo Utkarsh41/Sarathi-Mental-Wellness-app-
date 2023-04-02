@@ -1,9 +1,12 @@
 package com.utkarsh.scientific.sarathi;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -53,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        getSupportActionBar().hide();
 
         mImageSlider = findViewById(R.id.imageSlider);
         exploreSarathiButton = findViewById(R.id.exploreSarathiBtn);
@@ -150,6 +150,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_ut, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id==R.id.action_AboutUs){
+            Intent i = new Intent(MainActivity.this, AboutUs.class);
+            startActivity(i);
+            return  true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

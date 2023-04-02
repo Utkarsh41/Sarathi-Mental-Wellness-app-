@@ -8,6 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.utkarsh.scientific.sarathi.R;
+import com.utkarsh.scientific.sarathi.audioTherapyPack.AudioModel;
+
+import java.util.List;
 
 public class Adapter extends RecyclerView.ViewHolder implements View.OnClickListener {
 

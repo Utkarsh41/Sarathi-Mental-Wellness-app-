@@ -2,7 +2,11 @@ package com.utkarsh.scientific.sarathi.mediPack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +17,10 @@ public class Yogades extends AppCompatActivity {
 
     private TextView yog,descript,how,howd,caution,cautiond;
     private ImageView im;
+
+    Button YogaYtButton;
+
+    String loadUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,7 @@ public class Yogades extends AppCompatActivity {
         caution=(TextView) findViewById(R.id.caution);
         cautiond=(TextView) findViewById(R.id.cautiond);
         im=(ImageView)findViewById(R.id.detailBrIv);
+        YogaYtButton = findViewById(R.id.watchYogavideo);
 
         String asnName = getIntent().getExtras().getString("AssanName");
 
@@ -39,6 +48,7 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.VirbhadrasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.VirbhadrasanaC));
+            loadUrl = getString(R.string.VirabhadrasanaLink);
         }
         else if (asnName.equals("Natarajasana")) {
             im.setBackgroundResource(R.drawable.natarajasana);
@@ -48,6 +58,8 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.NatarajasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.NatarajasanaC));
+            loadUrl = getString(R.string.NatarajasanaLink);
+
         }
         else if (asnName.equals("Vriksasana")) {
             im.setBackgroundResource(R.drawable.vriksasana);
@@ -57,6 +69,8 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.VriksasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.VriksasanaC));
+            loadUrl = getString(R.string.VriksasanaLink);
+
         }
         else if (asnName.equals("Anjaneyasana")) {
             im.setBackgroundResource(R.drawable.anjaneyasana);
@@ -66,6 +80,8 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.AnjaneyasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.AnjaneyasanaC));
+            loadUrl = getString(R.string.AnjaneyasanaLink);
+
         }
         else if (asnName.equals("Garudasana")) {
             im.setBackgroundResource(R.drawable.garudasana);
@@ -75,6 +91,8 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.GarudasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.GarudasanaC));
+            loadUrl = getString(R.string.GarudasanaLink);
+
         }
         else if (asnName.equals("Adho Mukha Vrksasana")) {
             im.setBackgroundResource(R.drawable.handstand);
@@ -84,6 +102,8 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.AdhoMukhaVrksasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.AdhoMukhaVrksasanaC));
+            loadUrl = getString(R.string.AdhoMukhaVrksasanaLink);
+
         }
         else if (asnName.equals("Chakrasana")) {
             im.setBackgroundResource(R.drawable.chakrasana);
@@ -93,6 +113,9 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.ChakrasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.ChakrasanaC));
+            loadUrl = getString(R.string.ChakrasanaLink);
+
+
         }
         else if (asnName.equals("Vajrasana")) {
             im.setBackgroundResource(R.drawable.vajrasana);
@@ -102,6 +125,8 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.VajrasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.VajrasanaC));
+            loadUrl = getString(R.string.VajrasanaLink);
+
         }
         else if (asnName.equals("Padmasana")) {
             im.setBackgroundResource(R.drawable.padmasana);
@@ -111,6 +136,8 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.PadmasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.PadmasanaC));
+            loadUrl = getString(R.string.PadmasanaLink);
+
         }
         else if (asnName.equals("Savasana")) {
             im.setBackgroundResource(R.drawable.corpse);
@@ -120,7 +147,17 @@ public class Yogades extends AppCompatActivity {
             howd.setText(getResources().getString(R.string.SavasanaH));
             caution.setText(getResources().getString(R.string.caution));
             cautiond.setText(getResources().getString(R.string.SavasanaC));
+            loadUrl = getString(R.string.SavasanaLink);
+
         }
+
+        YogaYtButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(loadUrl));
+                startActivity(intent);
+            }
+        });
 
 
     }
