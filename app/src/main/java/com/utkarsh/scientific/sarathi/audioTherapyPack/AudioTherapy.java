@@ -75,15 +75,12 @@ public class AudioTherapy extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
 
         Toast.makeText(this, "Use Headphones For Better Experience", Toast.LENGTH_LONG).show();
-//        Toast.makeText(this, "Use Headphones For Better Experience", Toast.LENGTH_LONG).show();
-
         valueEventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 audioModelList.clear();
                 for(DataSnapshot dss:snapshot.getChildren()){
                     AudioModel audioModel = dss.getValue(AudioModel.class);
-//                    audioModel.setaDesc(
                     audioModelList.add(audioModel);
                 }
                 songAdapter.notifyDataSetChanged();
@@ -186,7 +183,6 @@ public class AudioTherapy extends AppCompatActivity {
                         intent.putExtra("audioUrl",audioUrl);
                         intent.putExtra("audioTitle",audioTitile);
                         startActivity(intent);
-//                        finish();
                     }
                 });
 
@@ -259,25 +255,16 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
 
     private void filterSearch(String text) {
-        // creating a new array list to filter our data.
         List<AudioModel> filteredlist = new ArrayList<AudioModel>();
 
-        // running a for loop to compare elements.
         for (AudioModel item : audioModelList) {
-            // checking if the entered string matched with any item of our recycler view.
             if (item.getaTitle().toLowerCase().contains(text.toLowerCase())) {
-                // if the item is matched we are
-                // adding it to our filtered list.
                 filteredlist.add(item);
             }
         }
         if (filteredlist.isEmpty()) {
-            // if no item is added in filtered list we are
-            // displaying a toast message as no data found.
             Toast.makeText(this, "No Data Found..", Toast.LENGTH_SHORT).show();
         } else {
-            // at last we are passing that filtered
-            // list to our adapter class.
             songAdapter.filterList(filteredlist);
         }
     }

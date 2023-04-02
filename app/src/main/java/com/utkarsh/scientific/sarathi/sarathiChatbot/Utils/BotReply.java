@@ -1,4 +1,4 @@
-package com.utkarsh.scientific.sarathi.sarathiChatbot.interfaces;
+package com.utkarsh.scientific.sarathi.sarathiChatbot.Utils;
 
 import com.google.cloud.dialogflow.v2.DetectIntentResponse;
 

@@ -22,9 +22,9 @@ import com.google.cloud.dialogflow.v2.TextInput;
 import com.google.common.collect.Lists;
 import com.utkarsh.scientific.sarathi.R;
 import com.utkarsh.scientific.sarathi.sarathiChatbot.adapters.ChatAdapter;
-import com.utkarsh.scientific.sarathi.sarathiChatbot.helpers.SendMessageInBg;
-import com.utkarsh.scientific.sarathi.sarathiChatbot.interfaces.BotReply;
-import com.utkarsh.scientific.sarathi.sarathiChatbot.models.Message;
+import com.utkarsh.scientific.sarathi.sarathiChatbot.KhanaServices.ResponseKanha;
+import com.utkarsh.scientific.sarathi.sarathiChatbot.Utils.BotReply;
+import com.utkarsh.scientific.sarathi.sarathiChatbot.kanhaModal.Message;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -100,7 +100,7 @@ public class SrMainActivity extends AppCompatActivity implements BotReply {
     private void sendMessageToBot(String message) {
         QueryInput input = QueryInput.newBuilder()
                 .setText(TextInput.newBuilder().setText(message).setLanguageCode("en-US")).build();
-        new SendMessageInBg(this, sessionName, sessionsClient, input).execute();
+        new ResponseKanha(this, sessionName, sessionsClient, input).execute();
     }
 
     @Override

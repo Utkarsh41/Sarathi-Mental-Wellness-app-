@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.utkarsh.scientific.sarathi.R;
-import com.utkarsh.scientific.sarathi.sarathiChatbot.models.Message;
+import com.utkarsh.scientific.sarathi.sarathiChatbot.kanhaModal.Message;
 
 import java.util.List;
 

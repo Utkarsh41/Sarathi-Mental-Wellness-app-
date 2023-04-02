@@ -1,4 +1,4 @@
-package com.utkarsh.scientific.sarathi.sarathiChatbot.models;
+package com.utkarsh.scientific.sarathi.sarathiChatbot.kanhaModal;
 
 public class Message {
 

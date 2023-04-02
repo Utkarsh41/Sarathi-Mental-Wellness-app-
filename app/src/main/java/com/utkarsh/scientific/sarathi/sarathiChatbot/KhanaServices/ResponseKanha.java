@@ -1,4 +1,4 @@
-package com.utkarsh.scientific.sarathi.sarathiChatbot.helpers;
+package com.utkarsh.scientific.sarathi.sarathiChatbot.KhanaServices;
 
 import android.os.AsyncTask;
 import android.util.Log;
@@ -8,9 +8,9 @@ import com.google.cloud.dialogflow.v2.DetectIntentResponse;
 import com.google.cloud.dialogflow.v2.QueryInput;
 import com.google.cloud.dialogflow.v2.SessionName;
 import com.google.cloud.dialogflow.v2.SessionsClient;
-import com.utkarsh.scientific.sarathi.sarathiChatbot.interfaces.BotReply;
+import com.utkarsh.scientific.sarathi.sarathiChatbot.Utils.BotReply;
 
-public class SendMessageInBg extends AsyncTask<Void, Void, DetectIntentResponse> {
+public class ResponseKanha extends AsyncTask<Void, Void, DetectIntentResponse> {
 
 
     private final SessionName session;
@@ -19,8 +19,8 @@ public class SendMessageInBg extends AsyncTask<Void, Void, DetectIntentResponse>
     private final String TAG = "async";
     private final BotReply botReply;
 
-    public SendMessageInBg(BotReply botReply, SessionName session, SessionsClient sessionsClient,
-                           QueryInput queryInput) {
+    public ResponseKanha(BotReply botReply, SessionName session, SessionsClient sessionsClient,
+                         QueryInput queryInput) {
         this.botReply = botReply;
         this.session = session;
         this.sessionsClient = sessionsClient;

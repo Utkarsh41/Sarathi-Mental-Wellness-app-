@@ -1,4 +1,4 @@
-package com.utkarsh.scientific.sarathi.sarathiChatbot.helpers;
+package com.utkarsh.scientific.sarathi.sarathiChatbot.KhanaServices;
 
 import static android.content.ContentValues.TAG;
 
@@ -10,17 +10,17 @@ import com.google.cloud.dialogflow.v2.DetectIntentResponse;
 import com.google.cloud.dialogflow.v2.QueryInput;
 import com.google.cloud.dialogflow.v2.SessionName;
 import com.google.cloud.dialogflow.v2.SessionsClient;
-import com.utkarsh.scientific.sarathi.sarathiChatbot.interfaces.BotReply;
+import com.utkarsh.scientific.sarathi.sarathiChatbot.Utils.BotReply;
 
-public class RequestJavaV2Task extends AsyncTask<Void, Void, DetectIntentResponse> {
+public class RequestKanha extends AsyncTask<Void, Void, DetectIntentResponse> {
 
     private final BotReply mInterface;
     private final SessionName session;
     private final SessionsClient sessionsClient;
     private final QueryInput queryInput;
 
-    public RequestJavaV2Task(BotReply mInterface, SessionName session, SessionsClient sessionsClient,
-                             QueryInput queryInput) {
+    public RequestKanha(BotReply mInterface, SessionName session, SessionsClient sessionsClient,
+                        QueryInput queryInput) {
         this.mInterface = mInterface;
         this.session = session;
         this.sessionsClient = sessionsClient;

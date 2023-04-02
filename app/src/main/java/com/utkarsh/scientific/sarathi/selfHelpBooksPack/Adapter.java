@@ -30,4 +30,4 @@ public class Adapter extends RecyclerView.ViewHolder implements View.OnClickList
     }
 }
 
-// Sarathi@2023krishna
+
